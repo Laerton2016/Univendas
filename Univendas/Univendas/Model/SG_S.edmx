@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model_S.Store" Provider="FirebirdSql.Data.FirebirdClient" ProviderManifestToken="2.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TESTOQUE">
+          <Key>
+            <PropertyRef Name="CONTROLE" />
+          </Key>
+          <Property Name="CONTROLE" Type="int" Nullable="false" />
+          <Property Name="PRODUTO" Type="varchar" MaxLength="100" Unicode="true" Nullable="false" />
+          <Property Name="TIPOBARRA" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CODBARRAS" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="UNIDADE" Type="varchar" MaxLength="6" Unicode="true" Nullable="false" />
+          <Property Name="PRECOCUSTO" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+          <Property Name="PERCLUCRO" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+          <Property Name="PRECOVENDA" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+          <Property Name="CODGRUPO" Type="int" />
+          <Property Name="GRUPO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="OBS" Type="clob" Unicode="true" />
+          <Property Name="CODFORNECEDOR" Type="int" />
+          <Property Name="FORNECEDOR" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="TAMANHO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="PESO" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="CUSTOULTIMACOMPRA" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="CUSTOMEDIO" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="QTDETOTALCOMPRADA" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="QTDETOTALVENDIDA" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="DATAULTIMACOMPRA" Type="date" />
+          <Property Name="DATAULTIMAVENDA" Type="date" />
+          <Property Name="DATAHORACADASTRO" Type="timestamp" />
+          <Property Name="QTDEMINIMA" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="QTDEMAXIMA" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="QTDE" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="ATIVO" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="NCM" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="PERCREDITOCICMS" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="USAGRADE" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="USASERIAL" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="ORIGEM" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="CODTRIBUTACAOIPI" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="TRIBUTACAOIPI" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CODTRIBUTACAOPIS" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="CODTRIBUTACAOCOFINS" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="TRIBUTACAOPIS" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="TRIBUTACAOCOFINS" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="TIPOTRIBUTACAO" Type="varchar" MaxLength="80" Unicode="true" />
+          <Property Name="PERCICMSSTINTERNA" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PERCMVAORIGINAL" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="POSSUIICMSST" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="ISENTO" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="PERCICMSPROPRIOST" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="IAT" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+          <Property Name="IPPT" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+          <Property Name="TRIBUTADO" Type="varchar" MaxLength="3" Unicode="true" Nullable="false" />
+          <Property Name="CSOSN" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="DESCRICAOCSOSN" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="PESADO" Type="varchar" MaxLength="3" Unicode="true" Nullable="false" />
+          <Property Name="BASECALCULOICMSSTRETIDO" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="VALORICMSSTRETIDO" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="ALIQUOTAICMSECF" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="FOTO" Type="blob" />
+          <Property Name="MD5" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="MENSAGEMNFE" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="CODMENSAGEMNFE" Type="int" />
+          <Property Name="CODUNIDADEMEDIDA" Type="int" Nullable="false" />
+          <Property Name="CODAPLICACAOPRODUTO" Type="varchar" MaxLength="2" Unicode="true" />
+          <Property Name="APLICACAOPRODUTO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="MD5E2" Type="varchar" MaxLength="80" Unicode="true" />
+          <Property Name="QTDEINICIAL" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="ALIQUOTAISS" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="CODIMPOSTOMEDIO" Type="int" />
+          <Property Name="PERCIMPOSTOMEDIO" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="CODCSTORIGEM" Type="int" Nullable="false" />
+          <Property Name="CODIGOCSTORIGEM" Type="int" />
+          <Property Name="CODEMITENTE" Type="int" />
+          <Property Name="DIASVALIDADEPRODUTO" Type="int" />
+          <Property Name="FATORCONVERSAO" Type="varchar" MaxLength="2" Unicode="true" Nullable="false" />
+          <Property Name="TRIBUTACAOSERVICO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="REDUCAOBASECALCULOSERVICO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="STATUS" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="DESCRICAOCOMPLEMENTAR" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="REFERENCIA" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="PRECOVENDAUSS" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PERCMAXIMODESCONTO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="VALORCOMISSAOFIXO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PERCCOMISSAO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PRECOMINIMOUSS" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PRECOMINIMO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="CODCOMPRA" Type="int" />
+          <Property Name="VALORFRETE" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="VALOROUTROS" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="VALORICMSST" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="VALORIPI" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="VALORUNITARIOCOMPRA" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="PERCPIS" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="PERCCOFINS" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="VALORCONVERSAO" Type="decimal" Precision="15" Scale="8" />
+          <Property Name="CAMPO1" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO2" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO3" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO4" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO5" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO6" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO7" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO8" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO9" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO10" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CODIGOANP" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="MARCA" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="PERCREDUCAOBC" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PERCREDUCAOBCST" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="CODSUBGRUPO" Type="int" />
+          <Property Name="SUBGRUPO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CONTROLARVALIDADE" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="CODMARCA" Type="int" />
+          <Property Name="PRECOREVENDA" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PERCIPI" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="CFOP" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="UNIDADECONVERSAOVENDA" Type="varchar" MaxLength="6" Unicode="true" />
+          <Property Name="VALORCONVERSAOVENDA" Type="decimal" Precision="15" Scale="8" />
+          <Property Name="CODTABELAPRECO" Type="int" />
+          <Property Name="NOMETABELAPRECO" Type="varchar" MaxLength="200" Unicode="true" />
+          <Property Name="PERCIMPOSTOMEDIOESTADUAL" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PERCIMPOSTOMEDIOMUNICIPAL" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="CODIGOENQUADRAMENTOIPI" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="CEST" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="QTDEEMPRODUCAO" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="QTDEPEDIDOVENDA" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="QTDEPEDIDOCOMPRA" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="QTDERESERVADA" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="QTDEREAL" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="QTDEEMPRODUCAOMP" Type="numeric" Precision="15" Scale="4" />
+        </EntityType>
+        <EntityType Name="TITEMPREVENDA">
+          <Key>
+            <PropertyRef Name="CONTROLE" />
+          </Key>
+          <Property Name="CONTROLE" Type="int" Nullable="false" />
+          <Property Name="CODPREVENDA" Type="int" Nullable="false" />
+          <Property Name="PRODUTO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CODPRODUTO" Type="int" Nullable="false" />
+          <Property Name="VALORACRESCIMO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="VALORDESCONTO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="VALORUNITARIO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="VALORTOTAL" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="QTDE" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="UN" Type="varchar" MaxLength="5" Unicode="true" />
+          <Property Name="DATAHORACADASTRO" Type="timestamp" />
+          <Property Name="CANCELADO" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="CONFIRMADO" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="MESCLAR" Type="varchar" MaxLength="3" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TPREVENDA">
+          <Key>
+            <PropertyRef Name="CONTROLE" />
+          </Key>
+          <Property Name="CONTROLE" Type="int" Nullable="false" />
+          <Property Name="CLIENTE" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CODCLIENTE" Type="int" />
+          <Property Name="CODFUNCIONARIO" Type="int" />
+          <Property Name="FUNCIONARIO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="VALORTOTAL" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="VALORACRESCIMO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="VALORDESCONTO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="CONTROLEVARCHAR" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="DATAHORACADASTRO" Type="timestamp" />
+          <Property Name="CODSEQUENCIA" Type="int" />
+          <Property Name="CNPJCPF" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="STATUS" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="MESCLAR" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="SENHAINTERNA" Type="varchar" MaxLength="500" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Model_SStoreContainer">
+          <EntitySet Name="TESTOQUE" EntityType="Self.TESTOQUE" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TITEMPREVENDA" EntityType="Self.TITEMPREVENDA" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TPREVENDA" EntityType="Self.TPREVENDA" Schema="Firebird" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model_S" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TESTOQUE">
+          <Key>
+            <PropertyRef Name="CONTROLE" />
+          </Key>
+          <Property Name="CONTROLE" Type="Int32" Nullable="false" />
+          <Property Name="PRODUTO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TIPOBARRA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CODBARRAS" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UNIDADE" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PRECOCUSTO" Type="Decimal" Precision="15" Scale="4" Nullable="false" />
+          <Property Name="PERCLUCRO" Type="Decimal" Precision="15" Scale="4" Nullable="false" />
+          <Property Name="PRECOVENDA" Type="Decimal" Precision="15" Scale="4" Nullable="false" />
+          <Property Name="CODGRUPO" Type="Int32" />
+          <Property Name="GRUPO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OBS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CODFORNECEDOR" Type="Int32" />
+          <Property Name="FORNECEDOR" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TAMANHO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PESO" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="CUSTOULTIMACOMPRA" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="CUSTOMEDIO" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="QTDETOTALCOMPRADA" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="QTDETOTALVENDIDA" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="DATAULTIMACOMPRA" Type="DateTime" />
+          <Property Name="DATAULTIMAVENDA" Type="DateTime" />
+          <Property Name="DATAHORACADASTRO" Type="DateTime" />
+          <Property Name="QTDEMINIMA" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="QTDEMAXIMA" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="QTDE" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="ATIVO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="NCM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PERCREDITOCICMS" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="USAGRADE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="USASERIAL" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ORIGEM" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="CODTRIBUTACAOIPI" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="TRIBUTACAOIPI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CODTRIBUTACAOPIS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="CODTRIBUTACAOCOFINS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="TRIBUTACAOPIS" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="TRIBUTACAOCOFINS" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="TIPOTRIBUTACAO" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="PERCICMSSTINTERNA" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PERCMVAORIGINAL" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="POSSUIICMSST" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ISENTO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="PERCICMSPROPRIOST" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="IAT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IPPT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TRIBUTADO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CSOSN" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRICAOCSOSN" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="PESADO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BASECALCULOICMSSTRETIDO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="VALORICMSSTRETIDO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="ALIQUOTAICMSECF" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="MD5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MENSAGEMNFE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CODMENSAGEMNFE" Type="Int32" />
+          <Property Name="CODUNIDADEMEDIDA" Type="Int32" Nullable="false" />
+          <Property Name="CODAPLICACAOPRODUTO" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="APLICACAOPRODUTO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MD5E2" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="QTDEINICIAL" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="ALIQUOTAISS" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="CODIMPOSTOMEDIO" Type="Int32" />
+          <Property Name="PERCIMPOSTOMEDIO" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="CODCSTORIGEM" Type="Int32" Nullable="false" />
+          <Property Name="CODIGOCSTORIGEM" Type="Int32" />
+          <Property Name="CODEMITENTE" Type="Int32" />
+          <Property Name="DIASVALIDADEPRODUTO" Type="Int32" />
+          <Property Name="FATORCONVERSAO" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TRIBUTACAOSERVICO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="REDUCAOBASECALCULOSERVICO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRICAOCOMPLEMENTAR" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="REFERENCIA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PRECOVENDAUSS" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PERCMAXIMODESCONTO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="VALORCOMISSAOFIXO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PERCCOMISSAO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PRECOMINIMOUSS" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PRECOMINIMO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="CODCOMPRA" Type="Int32" />
+          <Property Name="VALORFRETE" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="VALOROUTROS" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="VALORICMSST" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="VALORIPI" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="VALORUNITARIOCOMPRA" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="PERCPIS" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PERCCOFINS" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="VALORCONVERSAO" Type="Decimal" Precision="15" Scale="8" />
+          <Property Name="CAMPO1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO6" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO7" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO8" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO9" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO10" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CODIGOANP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MARCA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PERCREDUCAOBC" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PERCREDUCAOBCST" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="CODSUBGRUPO" Type="Int32" />
+          <Property Name="SUBGRUPO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CONTROLARVALIDADE" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CODMARCA" Type="Int32" />
+          <Property Name="PRECOREVENDA" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PERCIPI" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="CFOP" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="UNIDADECONVERSAOVENDA" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="VALORCONVERSAOVENDA" Type="Decimal" Precision="15" Scale="8" />
+          <Property Name="CODTABELAPRECO" Type="Int32" />
+          <Property Name="NOMETABELAPRECO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PERCIMPOSTOMEDIOESTADUAL" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PERCIMPOSTOMEDIOMUNICIPAL" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="CODIGOENQUADRAMENTOIPI" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CEST" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="QTDEEMPRODUCAO" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="QTDEPEDIDOVENDA" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="QTDEPEDIDOCOMPRA" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="QTDERESERVADA" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="QTDEREAL" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="QTDEEMPRODUCAOMP" Type="Decimal" Precision="15" Scale="4" />
+        </EntityType>
+        <EntityType Name="TITEMPREVENDA">
+          <Key>
+            <PropertyRef Name="CONTROLE" />
+          </Key>
+          <Property Name="CONTROLE" Type="Int32" Nullable="false" />
+          <Property Name="CODPREVENDA" Type="Int32" Nullable="false" />
+          <Property Name="PRODUTO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CODPRODUTO" Type="Int32" Nullable="false" />
+          <Property Name="VALORACRESCIMO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="VALORDESCONTO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="VALORUNITARIO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="VALORTOTAL" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="QTDE" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="UN" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="DATAHORACADASTRO" Type="DateTime" />
+          <Property Name="CANCELADO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CONFIRMADO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="MESCLAR" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TPREVENDA">
+          <Key>
+            <PropertyRef Name="CONTROLE" />
+          </Key>
+          <Property Name="CONTROLE" Type="Int32" Nullable="false" />
+          <Property Name="CLIENTE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CODCLIENTE" Type="Int32" />
+          <Property Name="CODFUNCIONARIO" Type="Int32" />
+          <Property Name="FUNCIONARIO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VALORTOTAL" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="VALORACRESCIMO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="VALORDESCONTO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="CONTROLEVARCHAR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DATAHORACADASTRO" Type="DateTime" />
+          <Property Name="CODSEQUENCIA" Type="Int32" />
+          <Property Name="CNPJCPF" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="MESCLAR" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SENHAINTERNA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Context_S" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TESTOQUE" EntityType="Self.TESTOQUE" />
+          <EntitySet Name="TITEMPREVENDA" EntityType="Self.TITEMPREVENDA" />
+          <EntitySet Name="TPREVENDA" EntityType="Self.TPREVENDA" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Model_SStoreContainer" CdmEntityContainer="Context_S">
+          <EntitySetMapping Name="TESTOQUE">
+            <EntityTypeMapping TypeName="Model_S.TESTOQUE">
+              <MappingFragment StoreEntitySet="TESTOQUE">
+                <ScalarProperty Name="CONTROLE" ColumnName="CONTROLE" />
+                <ScalarProperty Name="PRODUTO" ColumnName="PRODUTO" />
+                <ScalarProperty Name="TIPOBARRA" ColumnName="TIPOBARRA" />
+                <ScalarProperty Name="CODBARRAS" ColumnName="CODBARRAS" />
+                <ScalarProperty Name="UNIDADE" ColumnName="UNIDADE" />
+                <ScalarProperty Name="PRECOCUSTO" ColumnName="PRECOCUSTO" />
+                <ScalarProperty Name="PERCLUCRO" ColumnName="PERCLUCRO" />
+                <ScalarProperty Name="PRECOVENDA" ColumnName="PRECOVENDA" />
+                <ScalarProperty Name="CODGRUPO" ColumnName="CODGRUPO" />
+                <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+                <ScalarProperty Name="OBS" ColumnName="OBS" />
+                <ScalarProperty Name="CODFORNECEDOR" ColumnName="CODFORNECEDOR" />
+                <ScalarProperty Name="FORNECEDOR" ColumnName="FORNECEDOR" />
+                <ScalarProperty Name="TAMANHO" ColumnName="TAMANHO" />
+                <ScalarProperty Name="PESO" ColumnName="PESO" />
+                <ScalarProperty Name="CUSTOULTIMACOMPRA" ColumnName="CUSTOULTIMACOMPRA" />
+                <ScalarProperty Name="CUSTOMEDIO" ColumnName="CUSTOMEDIO" />
+                <ScalarProperty Name="QTDETOTALCOMPRADA" ColumnName="QTDETOTALCOMPRADA" />
+                <ScalarProperty Name="QTDETOTALVENDIDA" ColumnName="QTDETOTALVENDIDA" />
+                <ScalarProperty Name="DATAULTIMACOMPRA" ColumnName="DATAULTIMACOMPRA" />
+                <ScalarProperty Name="DATAULTIMAVENDA" ColumnName="DATAULTIMAVENDA" />
+                <ScalarProperty Name="DATAHORACADASTRO" ColumnName="DATAHORACADASTRO" />
+                <ScalarProperty Name="QTDEMINIMA" ColumnName="QTDEMINIMA" />
+                <ScalarProperty Name="QTDEMAXIMA" ColumnName="QTDEMAXIMA" />
+                <ScalarProperty Name="QTDE" ColumnName="QTDE" />
+                <ScalarProperty Name="ATIVO" ColumnName="ATIVO" />
+                <ScalarProperty Name="NCM" ColumnName="NCM" />
+                <ScalarProperty Name="PERCREDITOCICMS" ColumnName="PERCREDITOCICMS" />
+                <ScalarProperty Name="USAGRADE" ColumnName="USAGRADE" />
+                <ScalarProperty Name="USASERIAL" ColumnName="USASERIAL" />
+                <ScalarProperty Name="ORIGEM" ColumnName="ORIGEM" />
+                <ScalarProperty Name="CODTRIBUTACAOIPI" ColumnName="CODTRIBUTACAOIPI" />
+                <ScalarProperty Name="TRIBUTACAOIPI" ColumnName="TRIBUTACAOIPI" />
+                <ScalarProperty Name="CODTRIBUTACAOPIS" ColumnName="CODTRIBUTACAOPIS" />
+                <ScalarProperty Name="CODTRIBUTACAOCOFINS" ColumnName="CODTRIBUTACAOCOFINS" />
+                <ScalarProperty Name="TRIBUTACAOPIS" ColumnName="TRIBUTACAOPIS" />
+                <ScalarProperty Name="TRIBUTACAOCOFINS" ColumnName="TRIBUTACAOCOFINS" />
+                <ScalarProperty Name="TIPOTRIBUTACAO" ColumnName="TIPOTRIBUTACAO" />
+                <ScalarProperty Name="PERCICMSSTINTERNA" ColumnName="PERCICMSSTINTERNA" />
+                <ScalarProperty Name="PERCMVAORIGINAL" ColumnName="PERCMVAORIGINAL" />
+                <ScalarProperty Name="POSSUIICMSST" ColumnName="POSSUIICMSST" />
+                <ScalarProperty Name="ISENTO" ColumnName="ISENTO" />
+                <ScalarProperty Name="PERCICMSPROPRIOST" ColumnName="PERCICMSPROPRIOST" />
+                <ScalarProperty Name="IAT" ColumnName="IAT" />
+                <ScalarProperty Name="IPPT" ColumnName="IPPT" />
+                <ScalarProperty Name="TRIBUTADO" ColumnName="TRIBUTADO" />
+                <ScalarProperty Name="CSOSN" ColumnName="CSOSN" />
+                <ScalarProperty Name="DESCRICAOCSOSN" ColumnName="DESCRICAOCSOSN" />
+                <ScalarProperty Name="PESADO" ColumnName="PESADO" />
+                <ScalarProperty Name="BASECALCULOICMSSTRETIDO" ColumnName="BASECALCULOICMSSTRETIDO" />
+                <ScalarProperty Name="VALORICMSSTRETIDO" ColumnName="VALORICMSSTRETIDO" />
+                <ScalarProperty Name="ALIQUOTAICMSECF" ColumnName="ALIQUOTAICMSECF" />
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+                <ScalarProperty Name="MD5" ColumnName="MD5" />
+                <ScalarProperty Name="MENSAGEMNFE" ColumnName="MENSAGEMNFE" />
+                <ScalarProperty Name="CODMENSAGEMNFE" ColumnName="CODMENSAGEMNFE" />
+                <ScalarProperty Name="CODUNIDADEMEDIDA" ColumnName="CODUNIDADEMEDIDA" />
+                <ScalarProperty Name="CODAPLICACAOPRODUTO" ColumnName="CODAPLICACAOPRODUTO" />
+                <ScalarProperty Name="APLICACAOPRODUTO" ColumnName="APLICACAOPRODUTO" />
+                <ScalarProperty Name="MD5E2" ColumnName="MD5E2" />
+                <ScalarProperty Name="QTDEINICIAL" ColumnName="QTDEINICIAL" />
+                <ScalarProperty Name="ALIQUOTAISS" ColumnName="ALIQUOTAISS" />
+                <ScalarProperty Name="CODIMPOSTOMEDIO" ColumnName="CODIMPOSTOMEDIO" />
+                <ScalarProperty Name="PERCIMPOSTOMEDIO" ColumnName="PERCIMPOSTOMEDIO" />
+                <ScalarProperty Name="CODCSTORIGEM" ColumnName="CODCSTORIGEM" />
+                <ScalarProperty Name="CODIGOCSTORIGEM" ColumnName="CODIGOCSTORIGEM" />
+                <ScalarProperty Name="CODEMITENTE" ColumnName="CODEMITENTE" />
+                <ScalarProperty Name="DIASVALIDADEPRODUTO" ColumnName="DIASVALIDADEPRODUTO" />
+                <ScalarProperty Name="FATORCONVERSAO" ColumnName="FATORCONVERSAO" />
+                <ScalarProperty Name="TRIBUTACAOSERVICO" ColumnName="TRIBUTACAOSERVICO" />
+                <ScalarProperty Name="REDUCAOBASECALCULOSERVICO" ColumnName="REDUCAOBASECALCULOSERVICO" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="DESCRICAOCOMPLEMENTAR" ColumnName="DESCRICAOCOMPLEMENTAR" />
+                <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+                <ScalarProperty Name="PRECOVENDAUSS" ColumnName="PRECOVENDAUSS" />
+                <ScalarProperty Name="PERCMAXIMODESCONTO" ColumnName="PERCMAXIMODESCONTO" />
+                <ScalarProperty Name="VALORCOMISSAOFIXO" ColumnName="VALORCOMISSAOFIXO" />
+                <ScalarProperty Name="PERCCOMISSAO" ColumnName="PERCCOMISSAO" />
+                <ScalarProperty Name="PRECOMINIMOUSS" ColumnName="PRECOMINIMOUSS" />
+                <ScalarProperty Name="PRECOMINIMO" ColumnName="PRECOMINIMO" />
+                <ScalarProperty Name="CODCOMPRA" ColumnName="CODCOMPRA" />
+                <ScalarProperty Name="VALORFRETE" ColumnName="VALORFRETE" />
+                <ScalarProperty Name="VALOROUTROS" ColumnName="VALOROUTROS" />
+                <ScalarProperty Name="VALORICMSST" ColumnName="VALORICMSST" />
+                <ScalarProperty Name="VALORIPI" ColumnName="VALORIPI" />
+                <ScalarProperty Name="VALORUNITARIOCOMPRA" ColumnName="VALORUNITARIOCOMPRA" />
+                <ScalarProperty Name="PERCPIS" ColumnName="PERCPIS" />
+                <ScalarProperty Name="PERCCOFINS" ColumnName="PERCCOFINS" />
+                <ScalarProperty Name="VALORCONVERSAO" ColumnName="VALORCONVERSAO" />
+                <ScalarProperty Name="CAMPO1" ColumnName="CAMPO1" />
+                <ScalarProperty Name="CAMPO2" ColumnName="CAMPO2" />
+                <ScalarProperty Name="CAMPO3" ColumnName="CAMPO3" />
+                <ScalarProperty Name="CAMPO4" ColumnName="CAMPO4" />
+                <ScalarProperty Name="CAMPO5" ColumnName="CAMPO5" />
+                <ScalarProperty Name="CAMPO6" ColumnName="CAMPO6" />
+                <ScalarProperty Name="CAMPO7" ColumnName="CAMPO7" />
+                <ScalarProperty Name="CAMPO8" ColumnName="CAMPO8" />
+                <ScalarProperty Name="CAMPO9" ColumnName="CAMPO9" />
+                <ScalarProperty Name="CAMPO10" ColumnName="CAMPO10" />
+                <ScalarProperty Name="CODIGOANP" ColumnName="CODIGOANP" />
+                <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+                <ScalarProperty Name="PERCREDUCAOBC" ColumnName="PERCREDUCAOBC" />
+                <ScalarProperty Name="PERCREDUCAOBCST" ColumnName="PERCREDUCAOBCST" />
+                <ScalarProperty Name="CODSUBGRUPO" ColumnName="CODSUBGRUPO" />
+                <ScalarProperty Name="SUBGRUPO" ColumnName="SUBGRUPO" />
+                <ScalarProperty Name="CONTROLARVALIDADE" ColumnName="CONTROLARVALIDADE" />
+                <ScalarProperty Name="CODMARCA" ColumnName="CODMARCA" />
+                <ScalarProperty Name="PRECOREVENDA" ColumnName="PRECOREVENDA" />
+                <ScalarProperty Name="PERCIPI" ColumnName="PERCIPI" />
+                <ScalarProperty Name="CFOP" ColumnName="CFOP" />
+                <ScalarProperty Name="UNIDADECONVERSAOVENDA" ColumnName="UNIDADECONVERSAOVENDA" />
+                <ScalarProperty Name="VALORCONVERSAOVENDA" ColumnName="VALORCONVERSAOVENDA" />
+                <ScalarProperty Name="CODTABELAPRECO" ColumnName="CODTABELAPRECO" />
+                <ScalarProperty Name="NOMETABELAPRECO" ColumnName="NOMETABELAPRECO" />
+                <ScalarProperty Name="PERCIMPOSTOMEDIOESTADUAL" ColumnName="PERCIMPOSTOMEDIOESTADUAL" />
+                <ScalarProperty Name="PERCIMPOSTOMEDIOMUNICIPAL" ColumnName="PERCIMPOSTOMEDIOMUNICIPAL" />
+                <ScalarProperty Name="CODIGOENQUADRAMENTOIPI" ColumnName="CODIGOENQUADRAMENTOIPI" />
+                <ScalarProperty Name="CEST" ColumnName="CEST" />
+                <ScalarProperty Name="QTDEEMPRODUCAO" ColumnName="QTDEEMPRODUCAO" />
+                <ScalarProperty Name="QTDEPEDIDOVENDA" ColumnName="QTDEPEDIDOVENDA" />
+                <ScalarProperty Name="QTDEPEDIDOCOMPRA" ColumnName="QTDEPEDIDOCOMPRA" />
+                <ScalarProperty Name="QTDERESERVADA" ColumnName="QTDERESERVADA" />
+                <ScalarProperty Name="QTDEREAL" ColumnName="QTDEREAL" />
+                <ScalarProperty Name="QTDEEMPRODUCAOMP" ColumnName="QTDEEMPRODUCAOMP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TITEMPREVENDA">
+            <EntityTypeMapping TypeName="Model_S.TITEMPREVENDA">
+              <MappingFragment StoreEntitySet="TITEMPREVENDA">
+                <ScalarProperty Name="CONTROLE" ColumnName="CONTROLE" />
+                <ScalarProperty Name="CODPREVENDA" ColumnName="CODPREVENDA" />
+                <ScalarProperty Name="PRODUTO" ColumnName="PRODUTO" />
+                <ScalarProperty Name="CODPRODUTO" ColumnName="CODPRODUTO" />
+                <ScalarProperty Name="VALORACRESCIMO" ColumnName="VALORACRESCIMO" />
+                <ScalarProperty Name="VALORDESCONTO" ColumnName="VALORDESCONTO" />
+                <ScalarProperty Name="VALORUNITARIO" ColumnName="VALORUNITARIO" />
+                <ScalarProperty Name="VALORTOTAL" ColumnName="VALORTOTAL" />
+                <ScalarProperty Name="QTDE" ColumnName="QTDE" />
+                <ScalarProperty Name="UN" ColumnName="UN" />
+                <ScalarProperty Name="DATAHORACADASTRO" ColumnName="DATAHORACADASTRO" />
+                <ScalarProperty Name="CANCELADO" ColumnName="CANCELADO" />
+                <ScalarProperty Name="CONFIRMADO" ColumnName="CONFIRMADO" />
+                <ScalarProperty Name="MESCLAR" ColumnName="MESCLAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TPREVENDA">
+            <EntityTypeMapping TypeName="Model_S.TPREVENDA">
+              <MappingFragment StoreEntitySet="TPREVENDA">
+                <ScalarProperty Name="CONTROLE" ColumnName="CONTROLE" />
+                <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+                <ScalarProperty Name="CODCLIENTE" ColumnName="CODCLIENTE" />
+                <ScalarProperty Name="CODFUNCIONARIO" ColumnName="CODFUNCIONARIO" />
+                <ScalarProperty Name="FUNCIONARIO" ColumnName="FUNCIONARIO" />
+                <ScalarProperty Name="VALORTOTAL" ColumnName="VALORTOTAL" />
+                <ScalarProperty Name="VALORACRESCIMO" ColumnName="VALORACRESCIMO" />
+                <ScalarProperty Name="VALORDESCONTO" ColumnName="VALORDESCONTO" />
+                <ScalarProperty Name="CONTROLEVARCHAR" ColumnName="CONTROLEVARCHAR" />
+                <ScalarProperty Name="DATAHORACADASTRO" ColumnName="DATAHORACADASTRO" />
+                <ScalarProperty Name="CODSEQUENCIA" ColumnName="CODSEQUENCIA" />
+                <ScalarProperty Name="CNPJCPF" ColumnName="CNPJCPF" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="MESCLAR" ColumnName="MESCLAR" />
+                <ScalarProperty Name="SENHAINTERNA" ColumnName="SENHAINTERNA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
