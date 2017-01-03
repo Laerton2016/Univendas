@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controle\CProduto.cs" />
+    <Compile Include="Controle\PC.cs" />
     <Compile Include="Controle\Util.cs" />
     <Compile Include="Model\SG_L.Context.cs">
       <AutoGen>True</AutoGen>

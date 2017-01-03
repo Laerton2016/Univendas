@@ -26,11 +26,11 @@ namespace Univendas.Controle
             int iSum = 0;
             int iDigit = 0;
 
-            // Calculate the checksum digit here.
-            for (int i = sTemp.Length-1; i >= 1; i--)
+            // Calcula o digito verificador do Código EAN repassado
+            for (int i = 0; i <= EAN.Length -1; i++)
             {
-                iDigit = Convert.ToInt32(sTemp.Substring(i - 1, 1));
-                if (i % 2 == 0)
+                iDigit = Convert.ToInt32(sTemp.Substring(i, 1));
+                if ((i+1) % 2 == 0)
                 {   // odd
                     iSum += iDigit * 3;
                 }
@@ -41,7 +41,6 @@ namespace Univendas.Controle
             }
 
             int iCheckSum = (10 - (iSum % 10)) % 10;
-            //this.ChecksumDigit = iCheckSum.ToString();
             return iCheckSum;
         }
         /// <summary>
@@ -54,7 +53,8 @@ namespace Univendas.Controle
             if (EAN.Length != 13) { throw new Exception("O código EAN deve conter 13 dígitos já com o verificador"); }
 
             int iDigit = Convert.ToInt32(EAN.Substring(EAN.Length - 1, 1));
-            String VEAN = EAN.Substring(EAN.Length - 1, 12);
+            //String VEAN = EAN.Substring(EAN.Length - 1, 11);
+            String VEAN = esquerda(EAN, 11);
             return (iDigit == CalculaDigitoEAN(VEAN));
         }
 
@@ -426,5 +426,5 @@ namespace Univendas.Controle
         }
 
     }
-}
+
 }
