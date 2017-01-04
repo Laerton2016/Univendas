@@ -15,7 +15,7 @@ namespace Univendas
 
             try
             {
-                List<TESTOQUE> lista = CProduto.Lista("SSD%amd");
+                List<TESTOQUE> lista = CProduto.Lista("SSD");
 
                 CProduto cp = new CProduto(lista[0].CODBARRAS);
                 Console.WriteLine(cp.Descricao());

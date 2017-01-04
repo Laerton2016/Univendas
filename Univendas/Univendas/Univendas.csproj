@@ -62,9 +62,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controle\Cliente.cs" />
     <Compile Include="Controle\CProduto.cs" />
+    <Compile Include="Controle\IVenda.cs" />
     <Compile Include="Controle\PC.cs" />
+    <Compile Include="Controle\Usuario.cs" />
     <Compile Include="Controle\Util.cs" />
+    <Compile Include="Controle\Venda.cs" />
     <Compile Include="Model\SG_L.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

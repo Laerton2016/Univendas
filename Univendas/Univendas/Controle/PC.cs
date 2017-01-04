@@ -10,6 +10,7 @@ namespace Univendas.Controle
 {
     public static class PC
     {
+        /*
         static IQueryable<T> WhereLike<T>(this IQueryable<T> source,
         string propertyOrFieldName, string pattern, char escapeCharacter)
         {
@@ -22,7 +23,8 @@ namespace Univendas.Controle
                 Expression.Constant(pattern, typeof(string)),
                 Expression.Constant(escapeCharacter, typeof(char)));
             var lambda = Expression.Lambda<Func<T, bool>>(body, param);
-            return source.Where(lambda);
+            return source.Where(lambda);            
         }
+        */
     }
 }
