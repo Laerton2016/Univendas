@@ -11,9 +11,7 @@ namespace Univendas
     {
         static void Main(string[] args)
         {
-            Context_Venda context = new Context_Venda();
-            context.usuario.Add(new usuario { LOGIN = "asdf", SENHA = "12332", TIPO = 2 });
-
+            /*
             try
             {
                 Usuario user = new Usuario("daniel", "1234");
@@ -38,9 +36,15 @@ namespace Univendas
 
                 Console.WriteLine(e.Message);
             }
+            */
+            Usuario user = new Usuario("daniel", "1234");
+            Cliente cliente = new Cliente();
+            Venda venda = new Venda(user, cliente, "06012017", "modalidade");
+            Console.WriteLine(CProduto.Lista("azul"));
+
+
 
             Console.Read();
         }
-
     }
 }

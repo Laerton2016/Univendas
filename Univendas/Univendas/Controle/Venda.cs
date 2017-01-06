@@ -14,15 +14,9 @@ namespace Univendas.Controle
     /// </summary>
     class Venda
     {
-        private Usuario usuario;
-        private List<IVenda> lista;
+        public List<IVenda> Lista { get; private set; }
 
-        public Venda (Usuario usuario, Cliente cliente, string data, string modalidade, string obs)
-        {
-
-        }
-
-        public Venda(Usuario usuario, Cliente cliente, string data, string modalidade)
+        public Venda (Usuario usuario, Cliente cliente, string data, string modalidade, string obs = "")
         {
 
         }
@@ -32,7 +26,7 @@ namespace Univendas.Controle
         /// </summary>
         public void AdicionaItem(IVenda item)
         {
-            lista.Add(item);
+            Lista.Add(item);
         }
 
         /// <summary>
@@ -41,8 +35,7 @@ namespace Univendas.Controle
         /// <returns>Decimal </returns>
         public decimal CalculaTotal()
         {
-            return lista.Sum(c => c._soma);
+            return Lista.Sum(c => c._soma);
         }
-
     }
 }
