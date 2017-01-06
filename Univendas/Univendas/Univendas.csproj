@@ -49,6 +49,14 @@
       <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.5.6.0\lib\net45\FirebirdSql.Data.FirebirdClient.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -69,6 +77,30 @@
     <Compile Include="Controle\Usuario.cs" />
     <Compile Include="Controle\Util.cs" />
     <Compile Include="Controle\Venda.cs" />
+    <Compile Include="Model\DB_V.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_V.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB_V.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_V.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB_V.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_V.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\itens_de_venda.cs">
+      <DependentUpon>DB_V.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\loja.cs">
+      <DependentUpon>DB_V.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\prevenda.cs">
+      <DependentUpon>DB_V.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\SG_L.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,6 +140,12 @@
     <Compile Include="Model\TPREVENDA.cs">
       <DependentUpon>SG_S.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\usuario.cs">
+      <DependentUpon>DB_V.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\venda.cs">
+      <DependentUpon>DB_V.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -117,6 +155,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SG_L.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="Model\DB_V.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_V.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\DB_V.edmx.diagram">
+      <DependentUpon>DB_V.edmx</DependentUpon>
+    </None>
     <None Include="Model\SG_L.edmx.diagram">
       <DependentUpon>SG_L.edmx</DependentUpon>
     </None>
@@ -130,6 +175,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Model\DB_V.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_V.edmx</DependentUpon>
+      <LastGenOutput>DB_V.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\DB_V.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_V.edmx</DependentUpon>
+      <LastGenOutput>DB_V.cs</LastGenOutput>
+    </Content>
     <Content Include="Model\SG_L.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SG_L.edmx</DependentUpon>
