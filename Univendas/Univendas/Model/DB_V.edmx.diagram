@@ -6,10 +6,10 @@
     <edmx:Diagrams>
       <Diagram DiagramId="459f13b967664e1eb128752035b8cc6d" Name="Diagram1">
         <EntityTypeShape EntityType="vendaModel.itens_de_venda" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="vendaModel.loja" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="vendaModel.prevenda" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="vendaModel.usuario" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="vendaModel.venda" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="vendaModel.loja" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="vendaModel.prevenda" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="vendaModel.usuario" Width="1.5" PointX="5.125" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="vendaModel.venda" Width="1.5" PointX="7.375" PointY="2.125" IsExpanded="true" />
         <AssociationConnector Association="vendaModel.fk_ITENS_DE_VENDA_LOJA1" ManuallyRouted="false" />
         <AssociationConnector Association="vendaModel.fk_PREVENDA_LOJA1" ManuallyRouted="false" />
         <AssociationConnector Association="vendaModel.fk_VENDA_USUARIO1" ManuallyRouted="false" />

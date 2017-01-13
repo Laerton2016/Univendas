@@ -8,7 +8,7 @@ namespace Univendas.Controle
     /// <summary>
     /// Classe encarregada de cuidar das regras de negócio de um Cliente.
     /// <Auto>Daniel Rodrigues Coura</Auto>
-    /// <Data>04/01/2017</Data>
+    /// <_data>04/01/2017</_data>
     /// </summary>
     class Cliente
     {

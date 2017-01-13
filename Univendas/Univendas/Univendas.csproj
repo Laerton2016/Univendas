@@ -72,11 +72,12 @@
   <ItemGroup>
     <Compile Include="Controle\Cliente.cs" />
     <Compile Include="Controle\CProduto.cs" />
-    <Compile Include="Controle\IVenda.cs" />
+    <Compile Include="Controle\ItemVenda.cs" />
+    <Compile Include="Controle\CLoja.cs" />
     <Compile Include="Controle\PC.cs" />
-    <Compile Include="Controle\Usuario.cs" />
+    <Compile Include="Controle\CUsuario.cs" />
     <Compile Include="Controle\Util.cs" />
-    <Compile Include="Controle\Venda.cs" />
+    <Compile Include="Controle\CVenda.cs" />
     <Compile Include="Model\DB_V.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

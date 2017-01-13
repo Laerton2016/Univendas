@@ -23,5 +23,11 @@ namespace Univendas.Model
         public int USUARIO_ID_USUARIO { get; set; }
     
         public virtual usuario usuario { get; set; }
+        /*
+        public static implicit operator venda(venda v)
+        {
+            throw new NotImplementedException();
+        }
+        */
     }
 }

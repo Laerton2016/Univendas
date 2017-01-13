@@ -12,7 +12,7 @@ namespace Univendas.Controle
     /// <summary>
     /// Classe encarregada de cuidar das regras de negócio de um produto.
     /// <Auto>Laerton Marques de Figueiredo</Auto>
-    /// <Data>01/01/2017</Data>
+    /// <_data>01/01/2017</_data>
     /// </summary>
     public class CProduto
     {
@@ -22,14 +22,14 @@ namespace Univendas.Controle
         private Context_S _CTS = new Context_S();
         private Int32 _estoqueL = 0;
         private Int32 _estoqueS = 0;
-        private String _EAN;
+        public String _EAN;
 
         /// <summary>
         /// CProduto cuida das regras de negócio que envolve os produtos dos bancos de dados.
         /// </summary>
         /// <param name="EAN">Código EAN obrigatório para que o sistema possa fazer a busca nos bancos de dados. Támanho fixo de 13 dígitos numéricos.</param>
         public CProduto(String EAN)
-        {
+            {
             if (!Util.Sonumeros(EAN)) { throw new Exception("O Código EAN só pode conter números."); }
             if (EAN.Length != 13) { throw new Exception("O Código EAN deve conter 13 dígitos."); }
             if (!Util.VerificaDigEAN(EAN)) { throw new Exception("O código de barras EAN é inválido."); }

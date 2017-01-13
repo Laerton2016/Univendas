@@ -9,8 +9,8 @@ namespace Univendas.Controle
     /// <summary>
     /// Classe que contém métodos úteis para uso no projeto
     /// <Autor>Laerton Marques de Figueiredo</Autor>
-    /// <Data>01/01/2016</Data>
-    /// </summary>
+    /// <_data>01/01/2016</_data>
+    /// </summary>                                      
     public class Util
     {
         /// <summary>
