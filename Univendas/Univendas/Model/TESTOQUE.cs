@@ -138,10 +138,5 @@ namespace Univendas.Model
         public Nullable<decimal> QTDERESERVADA { get; set; }
         public Nullable<decimal> QTDEREAL { get; set; }
         public Nullable<decimal> QTDEEMPRODUCAOMP { get; set; }
-
-        public override bool Equals(object obj)
-        {
-            return ((TESTOQUE)obj).CODBARRAS.Equals(this.CODBARRAS) ;
-        }
     }
 }

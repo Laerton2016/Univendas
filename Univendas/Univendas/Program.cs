@@ -22,9 +22,9 @@ namespace Univendas
             }
             */
 
-            Context_L _contextL = new Context_L();
-            Context_S _contextS = new Context_S();
-            Context_Venda _contextV = new Context_Venda();
+            Context_L _contextL = new Context_L(); //Banco SGBR Laerton
+            Context_S _contextS = new Context_S(); //Banco SGBR SIL
+            Context_Venda _contextV = new Context_Venda(); //Banco MySQL
 
             // Adicionando usuário e cliente para poder realizar a venda
             Console.WriteLine("Adicionando usuário e cliente...");
