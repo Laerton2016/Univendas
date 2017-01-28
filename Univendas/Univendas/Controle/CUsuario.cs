@@ -7,6 +7,10 @@ using Univendas.Model;
 
 namespace Univendas.Controle
 {
+    public enum TipoUser
+    {
+        ADMINISTRADOR = 1, VENDEDOR = 2, CAIXA = 3, CONSULTA = 4
+    }
     /// <summary>
     /// Classe encarregada de cuidar das regras de negócio de um Usuário.
     /// <Auto>Daniel Rodrigues Coura</Auto>
@@ -39,6 +43,22 @@ namespace Univendas.Controle
         public int GetTipo()
         {
             return _id.TIPO;
+        }
+
+        public void UpdateUser()
+        {
+
+        }
+
+        public void NewUsuario(usuario novo)
+        {
+            if (criador.TIPO != (int) TipoUser.ADMINISTRADOR)
+            {
+                throw new Exception("Usário sem privilégio para criar um novo usuário.");
+            }
+           _context.usuario.Add(novo);
+           _context.SaveChanges();
+            
         }
     }
 }
