@@ -111,7 +111,7 @@ namespace Univendas.Controle
         {
             using (Context_Venda cv = new Context_Venda())
             {
-                venda vend = new venda { CLIENTE = _client._id, DATA = _data, MODALIDADE = _modalidade, OBS = _obs, USUARIO_ID_USUARIO = _user._id.ID_USUARIO, VALOR_TOTAL = (float)CalculaTotal() };
+                venda vend = new venda { CLIENTE = _client._id, DATA = _data, MODALIDADE = _modalidade, OBS = _obs, USUARIO_ID_USUARIO = _user.User.ID_USUARIO, VALOR_TOTAL = (float)CalculaTotal() };
                 cv.venda.Add(vend);
                 cv.SaveChanges();
             }
