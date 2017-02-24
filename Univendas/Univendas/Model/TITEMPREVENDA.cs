@@ -28,5 +28,8 @@ namespace Univendas.Model
         public string CANCELADO { get; set; }
         public string CONFIRMADO { get; set; }
         public string MESCLAR { get; set; }
+        public int TPREVENDACONTROLE { get; set; }
+    
+        public virtual TPREVENDA TPREVENDA { get; set; }
     }
 }

@@ -20,8 +20,8 @@ namespace Univendas.Controle
         private TESTOQUE _produto_S;
         private Context_L _CTL = new Context_L();
         private Context_S _CTS = new Context_S();
-        private Int32 _estoqueL = 0;
-        private Int32 _estoqueS = 0;
+        private Decimal _estoqueL = 0;
+        private Decimal _estoqueS = 0;
         public String _EAN;
 
         /// <summary>
@@ -41,20 +41,31 @@ namespace Univendas.Controle
 
             if (_produto_L != null)
             {
-                EstoqueL = (Int32)_produto_L.QTDEREAL;
+                EstoqueL = (Decimal) _produto_L.QTDEREAL;
             }
 
             if (_produto_S != null)
             {
-                EstoqueS = (Int32)_produto_S.QTDEREAL;
+                EstoqueS = (Decimal) _produto_S.QTDEREAL;
             }
         }
 
-      
+        
 
         public String GetEAN()
         {
             return this._EAN;
+        }
+
+        public static CProduto GetCProduto(Int64 codProduto)
+        {
+            
+            Context_L contexto_l = new Context_L();
+            Context_S contexto_s = new Context_S();
+            TESTOQUE pl = contexto_l.TESTOQUE.Where(c => c.CONTROLE == codProduto).First();
+            TESTOQUE ps = contexto_s.TESTOQUE.Where(c => c.CONTROLE == codProduto).First();
+            return new CProduto(pl, ps);
+
         }
 
         public CProduto(TESTOQUE L, TESTOQUE S)
@@ -81,10 +92,7 @@ namespace Univendas.Controle
         /// <returns>Retorna uma lista de objetos TESTOQUE, retorna uma lista vazia caso não localize</returns>
         public static List<TESTOQUE> Lista(String termo)
         {
-            /*if (Util.ContemPontuacao(termo))
-            {
-                throw new Exception("Não é permitido o uso de caracteres especias.");
-            }*/
+           
             if (termo.Trim().Equals(""))
             {
                 throw new Exception("Não é permitido uso de string vazia.");
@@ -114,8 +122,51 @@ namespace Univendas.Controle
 
             return retorno;
         }
+        /// <summary>
+        /// Retorna a quantidade de pré-vendas pendentes de realização para o referente produto dependente da loja
+        /// </summary>
+        /// <param name="loja">Loja que pertence</param>
+        /// <returns></returns>
+        public Decimal QuantARealizarPrevenda(String loja)
+        {
+            
+            IQueryable<TITEMPREVENDA> p;
+            if (loja.ToUpper().Equals("L"))
+            {
+                p = _CTL.TITEMPREVENDA.Where(c => c.TPREVENDA.STATUS == "").Where(d => d.CODPRODUTO == this._produto_L.CONTROLE);
+                
+            }else
+            {
+                p = _CTS.TITEMPREVENDA.Where(c => c.TPREVENDA.STATUS == "").Where(d => d.CODPRODUTO == this._produto_S.CONTROLE);
+            }
 
-        
+            return Totaliza(p);
+        }
+
+        /// <summary>
+        /// Retorna a quantidade de pré-vendas pendentes de realização para o referente produto independente de loja
+        /// </summary>
+        /// <returns></returns>
+        public Decimal QuantARealizarPrevenda()
+        {
+            return QuantARealizarPrevenda("L") + QuantARealizarPrevenda("S");
+        }
+
+        /// <summary>
+        /// Método totaliza a soma da quantidade dos itens da lista de TItensprevenda repassado como  argumento.
+        /// </summary>
+        /// <param name="p">Lista de TITEMPREVENDA</param>
+        /// <returns></returns>
+        private decimal Totaliza(IQueryable<TITEMPREVENDA> p)
+        {
+            decimal total = 0;
+            foreach (var item in p)
+            {
+                total += (decimal)item.QTDE;
+            }
+            return total;
+        }
+
         /// <summary>
         /// Método retorna a descrição do produto
         /// </summary>
@@ -136,7 +187,7 @@ namespace Univendas.Controle
         /// Método retorna o estoque total do produto
         /// </summary>
         /// <returns>Inteiro positivo maior que zero.</returns>
-        public Int32 EstoqueGeral()
+        public Decimal EstoqueGeral()
         {
             return EstoqueL + EstoqueS;
         }
@@ -180,7 +231,7 @@ namespace Univendas.Controle
         /// <summary>
         /// Estoque da loja L
         /// </summary>
-        public int EstoqueL
+        public Decimal EstoqueL
         {
             get
             {
@@ -195,7 +246,7 @@ namespace Univendas.Controle
         /// <summary>
         /// Estoque da loja S
         /// </summary>
-        public int EstoqueS
+        public Decimal EstoqueS
         {
             get
             {

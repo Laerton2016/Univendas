@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Univendas.Model;
 using Univendas.Controle;
+using PersisteUnivendas;
 namespace Univendas
 {
     class Program
@@ -30,7 +31,7 @@ namespace Univendas
             Console.WriteLine("Adicionando usuário e cliente...");
 
             CUsuario user = new CUsuario("daniel", "1234");
-            Cliente cliente = new Cliente();
+            CCliente cliente = new CCliente();
 
 
             // Passando dados das vendas 

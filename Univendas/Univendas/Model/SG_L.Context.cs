@@ -28,5 +28,6 @@ namespace Univendas.Model
         public virtual DbSet<TESTOQUE> TESTOQUE { get; set; }
         public virtual DbSet<TITEMPREVENDA> TITEMPREVENDA { get; set; }
         public virtual DbSet<TPREVENDA> TPREVENDA { get; set; }
+        public virtual DbSet<TCLIENTE> TCLIENTE { get; set; }
     }
 }

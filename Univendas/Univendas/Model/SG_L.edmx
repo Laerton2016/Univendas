@@ -4,7 +4,97 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="FirebirdSql.Data.FirebirdClient" ProviderManifestToken="2.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="FirebirdSql.Data.FirebirdClient" ProviderManifestToken="2.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TCLIENTE">
+          <Key>
+            <PropertyRef Name="CONTROLE" />
+          </Key>
+          <Property Name="CONTROLE" Type="int" Nullable="false" />
+          <Property Name="CLIENTE" Type="varchar" MaxLength="100" Unicode="true" Nullable="false" />
+          <Property Name="ENDERECO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="COMPLEMENTO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="BAIRRO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CODCIDADE" Type="int" />
+          <Property Name="CIDADE" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="UF" Type="varchar" MaxLength="2" Unicode="true" />
+          <Property Name="PAIS" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CEP" Type="varchar" MaxLength="9" Unicode="true" />
+          <Property Name="NATURALIDADE" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="TIPOCLIENTE" Type="varchar" MaxLength="8" Unicode="true" />
+          <Property Name="RG" Type="varchar" MaxLength="20" Unicode="true" />
+          <Property Name="CPF" Type="varchar" MaxLength="20" Unicode="true" />
+          <Property Name="CNPJ" Type="varchar" MaxLength="20" Unicode="true" />
+          <Property Name="IE" Type="varchar" MaxLength="20" Unicode="true" />
+          <Property Name="IM" Type="varchar" MaxLength="20" Unicode="true" />
+          <Property Name="DATANASCIMENTO" Type="date" />
+          <Property Name="DATAHORACADASTRO" Type="timestamp" Nullable="false" />
+          <Property Name="PAI" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="MAE" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="TELEFONE" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CELULAR" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="ESTADOCIVIL" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="ATIVO" Type="varchar" MaxLength="3" Unicode="true" Nullable="false" />
+          <Property Name="FANTASIA" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="OBS" Type="clob" Unicode="true" />
+          <Property Name="LIMITECREDITO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="NOMECONJUGE" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="DATAULTIMAVENDA" Type="date" />
+          <Property Name="DIASSEMCOMPRAR" Type="int" />
+          <Property Name="CODCONVENIO" Type="int" />
+          <Property Name="CONVENIO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="PROFISSAO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="EMPRESAQUETRABALHA" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="FONETRABALHO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="RENDAMENSAL" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="TOTALVENDIDO" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="NACIONALIDADE" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NUMERO" Type="varchar" MaxLength="20" Unicode="true" />
+          <Property Name="CODCONSULTASPC" Type="int" />
+          <Property Name="SEXO" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="CODIGOCIDADEIBGE" Type="varchar" MaxLength="7" Unicode="true" />
+          <Property Name="CODEMITENTE" Type="int" />
+          <Property Name="NOMECONTATOJURIDICA" Type="varchar" MaxLength="60" Unicode="true" />
+          <Property Name="EMAIL2" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATUS" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="MD5L" Type="varchar" MaxLength="1000" Unicode="true" />
+          <Property Name="SERIAL" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="CODGRUPO" Type="int" />
+          <Property Name="GRUPO" Type="varchar" MaxLength="80" Unicode="true" />
+          <Property Name="FOTO" Type="clob" Unicode="true" />
+          <Property Name="TRIBUTACAO" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="CAMPO1" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO2" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO3" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO4" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO5" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO6" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO7" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO8" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO9" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CAMPO10" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="ISSMUNICIPIO" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="DADOSADICIONAIS" Type="clob" Unicode="true" />
+          <Property Name="SITE" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CODIGOPAIS" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="CSOSN" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="PERCICMSPROPRIOST" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PERCMVAORIGINAL" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PERCICMSSTINTERNA" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="PERCREDUCAOBCST" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="DESCRICAOCSOSN" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="CODIGOCSTORIGEM" Type="int" />
+          <Property Name="ORIGEM" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="POSSUIICMSST" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="ISENTO" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="TRIBUTADO" Type="varchar" MaxLength="3" Unicode="true" />
+          <Property Name="CODCSTORIGEM" Type="int" />
+          <Property Name="MENSAGEMFISCAL" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="CODTABELAPRECO" Type="int" />
+          <Property Name="TABELAPRECO" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="CODVENDEDOR" Type="int" />
+          <Property Name="VENDEDOR" Type="varchar" MaxLength="100" Unicode="true" />
+        </EntityType>
         <EntityType Name="TESTOQUE">
           <Key>
             <PropertyRef Name="CONTROLE" />
@@ -173,13 +263,29 @@
           <Property Name="MESCLAR" Type="varchar" MaxLength="3" Unicode="true" />
           <Property Name="SENHAINTERNA" Type="varchar" MaxLength="500" Unicode="true" />
         </EntityType>
+        <Association Name="FK_TPREVENDA_1">
+          <End Role="TCLIENTE" Type="Self.TCLIENTE" Multiplicity="0..1" />
+          <End Role="TPREVENDA" Type="Self.TPREVENDA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCLIENTE">
+              <PropertyRef Name="CONTROLE" />
+            </Principal>
+            <Dependent Role="TPREVENDA">
+              <PropertyRef Name="CODCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="TCLIENTE" EntityType="Self.TCLIENTE" Schema="Firebird" store:Type="Tables" />
           <EntitySet Name="TESTOQUE" EntityType="Self.TESTOQUE" Schema="Firebird" store:Type="Tables" />
           <EntitySet Name="TITEMPREVENDA" EntityType="Self.TITEMPREVENDA" Schema="Firebird" store:Type="Tables" />
           <EntitySet Name="TPREVENDA" EntityType="Self.TPREVENDA" Schema="Firebird" store:Type="Tables" />
+          <AssociationSet Name="FK_TPREVENDA_1" Association="Self.FK_TPREVENDA_1">
+            <End Role="TCLIENTE" EntitySet="TCLIENTE" />
+            <End Role="TPREVENDA" EntitySet="TPREVENDA" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -330,6 +436,8 @@
           <Property Name="CANCELADO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="CONFIRMADO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="MESCLAR" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TPREVENDA" Relationship="Model.TPREVENDATITEMPREVENDA" FromRole="TITEMPREVENDA" ToRole="TPREVENDA" />
+          <Property Name="TPREVENDACONTROLE" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="TPREVENDA">
           <Key>
@@ -350,12 +458,138 @@
           <Property Name="STATUS" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="MESCLAR" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="SENHAINTERNA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TCLIENTE" Relationship="Model.FK_TPREVENDA_1" FromRole="TPREVENDA" ToRole="TCLIENTE" />
+          <NavigationProperty Name="TITEMPREVENDA" Relationship="Model.TPREVENDATITEMPREVENDA" FromRole="TPREVENDA" ToRole="TITEMPREVENDA" />
         </EntityType>
         <EntityContainer Name="Context_L" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TESTOQUE" EntityType="Self.TESTOQUE" />
           <EntitySet Name="TITEMPREVENDA" EntityType="Self.TITEMPREVENDA" />
           <EntitySet Name="TPREVENDA" EntityType="Self.TPREVENDA" />
+          <EntitySet Name="TCLIENTE" EntityType="Model.TCLIENTE" />
+          <AssociationSet Name="FK_TPREVENDA_1" Association="Model.FK_TPREVENDA_1">
+            <End Role="TCLIENTE" EntitySet="TCLIENTE" />
+            <End Role="TPREVENDA" EntitySet="TPREVENDA" />
+          </AssociationSet>
+          <AssociationSet Name="TPREVENDATITEMPREVENDA" Association="Model.TPREVENDATITEMPREVENDA">
+            <End Role="TPREVENDA" EntitySet="TPREVENDA" />
+            <End Role="TITEMPREVENDA" EntitySet="TITEMPREVENDA" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="TCLIENTE">
+          <Key>
+            <PropertyRef Name="CONTROLE" />
+          </Key>
+          <Property Name="CONTROLE" Type="Int32" Nullable="false" />
+          <Property Name="CLIENTE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ENDERECO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COMPLEMENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BAIRRO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CODCIDADE" Type="Int32" />
+          <Property Name="CIDADE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UF" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="PAIS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CEP" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="NATURALIDADE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TIPOCLIENTE" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="RG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CPF" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CNPJ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DATANASCIMENTO" Type="DateTime" />
+          <Property Name="DATAHORACADASTRO" Type="DateTime" Nullable="false" />
+          <Property Name="PAI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MAE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CELULAR" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADOCIVIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ATIVO" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="FANTASIA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OBS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LIMITECREDITO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="NOMECONJUGE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DATAULTIMAVENDA" Type="DateTime" />
+          <Property Name="DIASSEMCOMPRAR" Type="Int32" />
+          <Property Name="CODCONVENIO" Type="Int32" />
+          <Property Name="CONVENIO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PROFISSAO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EMPRESAQUETRABALHA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FONETRABALHO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RENDAMENSAL" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="TOTALVENDIDO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="NACIONALIDADE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NUMERO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CODCONSULTASPC" Type="Int32" />
+          <Property Name="SEXO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CODIGOCIDADEIBGE" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="CODEMITENTE" Type="Int32" />
+          <Property Name="NOMECONTATOJURIDICA" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MD5L" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="SERIAL" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CODGRUPO" Type="Int32" />
+          <Property Name="GRUPO" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="FOTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TRIBUTACAO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO6" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO7" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO8" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO9" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CAMPO10" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ISSMUNICIPIO" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="DADOSADICIONAIS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SITE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CODIGOPAIS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="CSOSN" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="PERCICMSPROPRIOST" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PERCMVAORIGINAL" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PERCICMSSTINTERNA" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="PERCREDUCAOBCST" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="DESCRICAOCSOSN" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="CODIGOCSTORIGEM" Type="Int32" />
+          <Property Name="ORIGEM" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="POSSUIICMSST" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ISENTO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="TRIBUTADO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CODCSTORIGEM" Type="Int32" />
+          <Property Name="MENSAGEMFISCAL" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="CODTABELAPRECO" Type="Int32" />
+          <Property Name="TABELAPRECO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CODVENDEDOR" Type="Int32" />
+          <Property Name="VENDEDOR" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TPREVENDA" Relationship="Model.FK_TPREVENDA_1" FromRole="TCLIENTE" ToRole="TPREVENDA" />
+        </EntityType>
+        <Association Name="FK_TPREVENDA_1">
+          <End Type="Model.TCLIENTE" Role="TCLIENTE" Multiplicity="0..1" />
+          <End Type="Model.TPREVENDA" Role="TPREVENDA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCLIENTE">
+              <PropertyRef Name="CONTROLE" />
+            </Principal>
+            <Dependent Role="TPREVENDA">
+              <PropertyRef Name="CODCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TPREVENDATITEMPREVENDA">
+          <End Type="Model.TPREVENDA" Role="TPREVENDA" Multiplicity="1" />
+          <End Type="Model.TITEMPREVENDA" Role="TITEMPREVENDA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TPREVENDA">
+              <PropertyRef Name="CONTROLE" />
+            </Principal>
+            <Dependent Role="TITEMPREVENDA">
+              <PropertyRef Name="TPREVENDACONTROLE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -530,6 +764,97 @@
                 <ScalarProperty Name="STATUS" ColumnName="STATUS" />
                 <ScalarProperty Name="MESCLAR" ColumnName="MESCLAR" />
                 <ScalarProperty Name="SENHAINTERNA" ColumnName="SENHAINTERNA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TCLIENTE">
+            <EntityTypeMapping TypeName="Model.TCLIENTE">
+              <MappingFragment StoreEntitySet="TCLIENTE">
+                <ScalarProperty Name="VENDEDOR" ColumnName="VENDEDOR" />
+                <ScalarProperty Name="CODVENDEDOR" ColumnName="CODVENDEDOR" />
+                <ScalarProperty Name="TABELAPRECO" ColumnName="TABELAPRECO" />
+                <ScalarProperty Name="CODTABELAPRECO" ColumnName="CODTABELAPRECO" />
+                <ScalarProperty Name="MENSAGEMFISCAL" ColumnName="MENSAGEMFISCAL" />
+                <ScalarProperty Name="CODCSTORIGEM" ColumnName="CODCSTORIGEM" />
+                <ScalarProperty Name="TRIBUTADO" ColumnName="TRIBUTADO" />
+                <ScalarProperty Name="ISENTO" ColumnName="ISENTO" />
+                <ScalarProperty Name="POSSUIICMSST" ColumnName="POSSUIICMSST" />
+                <ScalarProperty Name="ORIGEM" ColumnName="ORIGEM" />
+                <ScalarProperty Name="CODIGOCSTORIGEM" ColumnName="CODIGOCSTORIGEM" />
+                <ScalarProperty Name="DESCRICAOCSOSN" ColumnName="DESCRICAOCSOSN" />
+                <ScalarProperty Name="PERCREDUCAOBCST" ColumnName="PERCREDUCAOBCST" />
+                <ScalarProperty Name="PERCICMSSTINTERNA" ColumnName="PERCICMSSTINTERNA" />
+                <ScalarProperty Name="PERCMVAORIGINAL" ColumnName="PERCMVAORIGINAL" />
+                <ScalarProperty Name="PERCICMSPROPRIOST" ColumnName="PERCICMSPROPRIOST" />
+                <ScalarProperty Name="CSOSN" ColumnName="CSOSN" />
+                <ScalarProperty Name="CODIGOPAIS" ColumnName="CODIGOPAIS" />
+                <ScalarProperty Name="SITE" ColumnName="SITE" />
+                <ScalarProperty Name="DADOSADICIONAIS" ColumnName="DADOSADICIONAIS" />
+                <ScalarProperty Name="ISSMUNICIPIO" ColumnName="ISSMUNICIPIO" />
+                <ScalarProperty Name="CAMPO10" ColumnName="CAMPO10" />
+                <ScalarProperty Name="CAMPO9" ColumnName="CAMPO9" />
+                <ScalarProperty Name="CAMPO8" ColumnName="CAMPO8" />
+                <ScalarProperty Name="CAMPO7" ColumnName="CAMPO7" />
+                <ScalarProperty Name="CAMPO6" ColumnName="CAMPO6" />
+                <ScalarProperty Name="CAMPO5" ColumnName="CAMPO5" />
+                <ScalarProperty Name="CAMPO4" ColumnName="CAMPO4" />
+                <ScalarProperty Name="CAMPO3" ColumnName="CAMPO3" />
+                <ScalarProperty Name="CAMPO2" ColumnName="CAMPO2" />
+                <ScalarProperty Name="CAMPO1" ColumnName="CAMPO1" />
+                <ScalarProperty Name="TRIBUTACAO" ColumnName="TRIBUTACAO" />
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+                <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+                <ScalarProperty Name="CODGRUPO" ColumnName="CODGRUPO" />
+                <ScalarProperty Name="SERIAL" ColumnName="SERIAL" />
+                <ScalarProperty Name="MD5L" ColumnName="MD5L" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="EMAIL2" ColumnName="EMAIL2" />
+                <ScalarProperty Name="NOMECONTATOJURIDICA" ColumnName="NOMECONTATOJURIDICA" />
+                <ScalarProperty Name="CODEMITENTE" ColumnName="CODEMITENTE" />
+                <ScalarProperty Name="CODIGOCIDADEIBGE" ColumnName="CODIGOCIDADEIBGE" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="CODCONSULTASPC" ColumnName="CODCONSULTASPC" />
+                <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+                <ScalarProperty Name="NACIONALIDADE" ColumnName="NACIONALIDADE" />
+                <ScalarProperty Name="TOTALVENDIDO" ColumnName="TOTALVENDIDO" />
+                <ScalarProperty Name="RENDAMENSAL" ColumnName="RENDAMENSAL" />
+                <ScalarProperty Name="FONETRABALHO" ColumnName="FONETRABALHO" />
+                <ScalarProperty Name="EMPRESAQUETRABALHA" ColumnName="EMPRESAQUETRABALHA" />
+                <ScalarProperty Name="PROFISSAO" ColumnName="PROFISSAO" />
+                <ScalarProperty Name="CONVENIO" ColumnName="CONVENIO" />
+                <ScalarProperty Name="CODCONVENIO" ColumnName="CODCONVENIO" />
+                <ScalarProperty Name="DIASSEMCOMPRAR" ColumnName="DIASSEMCOMPRAR" />
+                <ScalarProperty Name="DATAULTIMAVENDA" ColumnName="DATAULTIMAVENDA" />
+                <ScalarProperty Name="NOMECONJUGE" ColumnName="NOMECONJUGE" />
+                <ScalarProperty Name="LIMITECREDITO" ColumnName="LIMITECREDITO" />
+                <ScalarProperty Name="OBS" ColumnName="OBS" />
+                <ScalarProperty Name="FANTASIA" ColumnName="FANTASIA" />
+                <ScalarProperty Name="ATIVO" ColumnName="ATIVO" />
+                <ScalarProperty Name="ESTADOCIVIL" ColumnName="ESTADOCIVIL" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+                <ScalarProperty Name="TELEFONE" ColumnName="TELEFONE" />
+                <ScalarProperty Name="MAE" ColumnName="MAE" />
+                <ScalarProperty Name="PAI" ColumnName="PAI" />
+                <ScalarProperty Name="DATAHORACADASTRO" ColumnName="DATAHORACADASTRO" />
+                <ScalarProperty Name="DATANASCIMENTO" ColumnName="DATANASCIMENTO" />
+                <ScalarProperty Name="IM" ColumnName="IM" />
+                <ScalarProperty Name="IE" ColumnName="IE" />
+                <ScalarProperty Name="CNPJ" ColumnName="CNPJ" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="TIPOCLIENTE" ColumnName="TIPOCLIENTE" />
+                <ScalarProperty Name="NATURALIDADE" ColumnName="NATURALIDADE" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="UF" ColumnName="UF" />
+                <ScalarProperty Name="CIDADE" ColumnName="CIDADE" />
+                <ScalarProperty Name="CODCIDADE" ColumnName="CODCIDADE" />
+                <ScalarProperty Name="BAIRRO" ColumnName="BAIRRO" />
+                <ScalarProperty Name="COMPLEMENTO" ColumnName="COMPLEMENTO" />
+                <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
+                <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+                <ScalarProperty Name="CONTROLE" ColumnName="CONTROLE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

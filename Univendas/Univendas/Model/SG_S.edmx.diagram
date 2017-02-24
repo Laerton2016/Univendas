@@ -8,6 +8,9 @@
         <EntityTypeShape EntityType="Model_S.TESTOQUE" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model_S.TITEMPREVENDA" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model_S.TPREVENDA" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model_S.TCLIENTE" Width="1.5" PointX="2.5" PointY="27.125" />
+        <AssociationConnector Association="Model_S.FK_TPREVENDA_1" />
+        <AssociationConnector Association="Model_S.TPREVENDATITEMPREVENDA" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

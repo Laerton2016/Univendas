@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Univendas.Model;
+using PersisteUnivendas;
 
 namespace Univendas.Controle
 {

@@ -14,6 +14,12 @@ namespace Univendas.Model
     
     public partial class TPREVENDA
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TPREVENDA()
+        {
+            this.TITEMPREVENDA = new HashSet<TITEMPREVENDA>();
+        }
+    
         public int CONTROLE { get; set; }
         public string CLIENTE { get; set; }
         public Nullable<int> CODCLIENTE { get; set; }
@@ -29,5 +35,9 @@ namespace Univendas.Model
         public string STATUS { get; set; }
         public string MESCLAR { get; set; }
         public string SENHAINTERNA { get; set; }
+    
+        public virtual TCLIENTE TCLIENTE { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TITEMPREVENDA> TITEMPREVENDA { get; set; }
     }
 }
